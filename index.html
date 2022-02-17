@@ -5,10 +5,224 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Passionsprojekt</title>
+    <style>
+      main {
+        display: grid;
+        grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+        justify-content: space-evenly;
+        gap: 5px;
+      }
+
+      main section {
+        grid-column: 2/3;
+      }
+      header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      nav {
+        min-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        gap: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        grid-column: 2/3;
+        font-size: 2.5rem;
+        color: #3086f5;
+      }
+      h2 {
+        font-size: 1.5rem;
+        color: white;
+      }
+      p {
+        font-size: 1.1rem;
+        color: white;
+      }
+      section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+        margin: 1.5rem;
+      }
+
+      body {
+        background-color: #f7f5e9;
+      }
+
+      article {
+        border: 2px solid #400d01;
+        background-color: #400d01;
+        padding: 1.5rem;
+      }
+      img {
+        max-width: 100%;
+      }
+
+      .valgt {
+        background-color: #2a5081;
+      }
+
+      #modal {
+        width: 100vw;
+        height: 100vh;
+        display: fixed;
+        background-color: #400d01c9;
+        display: none;
+        position: fixed;
+        top: 0;
+      }
+      #modal article {
+        max-width: 250px;
+        margin: auto;
+        background-color: #f7f5e9a9;
+        transition: 0.7s ease;
+      }
+
+      button {
+        background-color: #3086f5;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+
+      .seeless {
+        background-color: #3086f5;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+    </style>
   </head>
   <body>
-    <h1></h1>
-    <h2></h2>
-    <p>hej</p>
+    <header>
+      <h1>Alle</h1>
+    </header>
+    <nav>
+      <button data-kategori="Alle" class="valgt">Alle</button>
+      <button data-kategori="Rødvin">Rødvin</button>
+      <button data-kategori="Hvidvin">Hvidvin</button>
+      <button data-kategori="Dessertvin">Dessertvin</button>
+      <button data-kategori="Champagne">Champagne</button>
+    </nav>
+    <aside id="modal">
+      <article>
+        <button class="seeless">Se mindre</button>
+        <h2></h2>
+        <img src="" alt="" />
+        <p class="land"></p>
+        <p class="drue"></p>
+        <p class="langbes"></p>
+      </article>
+    </aside>
+
+    <main>
+      <section id="data-container">
+        <template>
+          <article>
+            <h2></h2>
+            <img src="" alt="" />
+            <p class="land"></p>
+            <p class="kortbes"></p>
+          </article>
+        </template>
+      </section>
+    </main>
   </body>
+
+  <script>
+    //Generelle variabler
+    const container = document.querySelector("#data-container");
+    const modal = document.querySelector("#modal");
+    const template = document.querySelector("template");
+    const header = document.querySelector("header h1");
+    const footer = document.querySelector("footer");
+    const tilbage = document.querySelector(".seeless");
+    //Url til API
+    const url = "https://tema7database-98d1.restdb.io/rest/voresvin";
+    const key = "61fcf7ef3f215f310a37be70";
+    let data = [];
+
+    document.addEventListener("DOMContentLoaded", start);
+    let filter = "alle";
+    let voresVin;
+
+    //Funktion efter DOMload
+    function start() {
+      const filterKnapper = document.querySelectorAll("nav button");
+      filterKnapper.forEach((knap) =>
+        knap.addEventListener("click", filtrerVin)
+      );
+      hentdata();
+    }
+
+    function filtrerVin() {
+      filter = this.dataset.kategori;
+      document.querySelector(".valgt").classList.remove("valgt");
+      this.classList.add("valgt");
+      vis(voresVin);
+      header.textContent = this.textContent;
+    }
+
+    //API key funktion
+
+    const options = {
+      headers: {
+        "x-apikey": key,
+      },
+    };
+
+    //hentData funktion
+
+    async function hentdata() {
+      const respons = await fetch(url, options);
+      const json = await respons.json();
+      voresVin = json;
+      vis(voresVin);
+    }
+
+    function vis(voresVin) {
+      container.textContent = "";
+      voresVin.forEach((vin) => {
+        console.log("Kategori", vin.kategori);
+        if (filter == vin.kategori || filter == "alle") {
+          let klon = template.cloneNode(true).content;
+          klon.querySelector("h2").textContent = vin.vinnavn;
+          klon.querySelector("img").src = "billeder/" + vin.billede;
+          klon.querySelector(".land").textContent = "Land: " + vin.land;
+          klon.querySelector(".kortbes").textContent = vin.beskrivelse;
+          klon
+            .querySelector("article")
+            .addEventListener("click", () => visDetaljer(vin));
+          container.appendChild(klon);
+        }
+      });
+    }
+
+    function visDetaljer(vin) {
+      console.log(vin);
+      modal.querySelector("h2").textContent = vin.vinnavn;
+      modal.querySelector("img").src = "billeder/" + vin.billede;
+      modal.querySelector(".land").textContent = "Land: " + vin.land;
+      modal.querySelector(".drue").textContent = "Drueblanding: " + vin.drue;
+      modal.querySelector(".langbes").textContent = vin.langbeskrivelse;
+      modal.style.display = "block";
+    }
+
+    tilbage.addEventListener("click", () => (modal.style.display = "none"));
+  </script>
 </html>

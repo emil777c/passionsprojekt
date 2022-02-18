@@ -2,7 +2,7 @@ img {
   width: 100%;
 }
 .logo img {
-  max-width: 50%;
+  max-width: 90%;
 }
 * {
   margin: 0;
@@ -29,13 +29,42 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-nav {
-  min-height: 70px;
+nav ul button {
+  background: transparent;
+  border: none;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2677dd;
+  margin-right: 4rem;
+}
+
+.banner {
+  /* padding: 0.5rem; */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
-  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  font-family: "Abel", sans-serif;
+}
+
+.banner p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+a {
+  color: #2677dd;
+  text-decoration: none;
+}
+
+.banner ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
 /* Burgermenu knappen skjules ved større skærm---- */
@@ -71,9 +100,9 @@ article {
   padding: 1.5rem;
 }
 
-.valgt {
+/* .valgt {
   background-color: #2a5081;
-}
+} */
 
 #modal {
   width: 100vw;

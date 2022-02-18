@@ -1,7 +1,7 @@
 img {
   width: 100%;
 }
-.logo img {
+#logo_top {
   max-width: 90%;
 }
 * {
@@ -11,7 +11,7 @@ img {
 }
 
 body {
-  background-color: #f7f5e9;
+  background-color: #edead5;
 }
 
 main {
@@ -133,13 +133,17 @@ button,
   border-radius: 10px;
 }
 
-footer {
+footer p {
+  color: #2564b8;
+  line-height: 3.5;
+}
+
+address {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #ffac1c;
-  opacity: 30%;
-  padding: 40px;
+  background-color: #fadfab;
+  padding: 30px;
 }
 
 /* media queries starter her-------------- */

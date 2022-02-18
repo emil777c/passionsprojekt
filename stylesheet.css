@@ -130,13 +130,14 @@ article {
   display: none;
   position: fixed;
   top: 0;
+  overflow: scroll;
 }
 #modal article {
   max-width: 600px;
   margin: auto;
   background-color: #400d01;
   transition: 0.7s ease;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 button,

@@ -86,6 +86,7 @@
     //Generelle variabler
     const container = document.querySelector("#data-container");
     const modal = document.querySelector("#modal");
+    const body = document.querySelector("body");
     const template = document.querySelector("template");
     const h1er = document.querySelector("div h1");
     const footer = document.querySelector("footer");
@@ -158,10 +159,14 @@
       modal.querySelector("h3").textContent = "Land: " + vin.land;
       modal.querySelector(".drue").textContent = "Drueblanding: " + vin.drue;
       modal.querySelector(".langbes").textContent = vin.langbeskrivelse;
+      body.style.overflow = "hidden";
       modal.style.display = "block";
     }
 
-    tilbage.addEventListener("click", () => (modal.style.display = "none"));
+    tilbage.addEventListener("click", () => {
+      modal.style.display = "none";
+      body.style.overflow = "auto";
+    });
 
     // Burgermenu---------------
 

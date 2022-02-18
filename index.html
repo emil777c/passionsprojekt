@@ -36,8 +36,9 @@
         </ul>
       </nav>
     </div>
-
-    <h1>Alle</h1>
+    <div>
+      <h1>Alle</h1>
+    </div>
     <aside id="modal">
       <article>
         <button class="seeless">Se mindre</button>
@@ -86,7 +87,7 @@
     const container = document.querySelector("#data-container");
     const modal = document.querySelector("#modal");
     const template = document.querySelector("template");
-    const header = document.querySelector("header h1");
+    const h1er = document.querySelector("div h1");
     const footer = document.querySelector("footer");
     const tilbage = document.querySelector(".seeless");
     //Url til API
@@ -112,7 +113,7 @@
       document.querySelector(".valgt").classList.remove("valgt");
       this.classList.add("valgt");
       vis(voresVin);
-      header.textContent = this.textContent;
+      h1er.textContent = this.textContent;
     }
 
     //API key funktion

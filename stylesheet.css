@@ -4,6 +4,13 @@ img {
 #logo_top {
   max-width: 90%;
 }
+
+#logo_top img {
+  margin-left: 4rem;
+  margin-top: 2rem;
+  max-width: 80%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +54,6 @@ nav ul button {
   justify-content: space-between;
   flex-wrap: wrap;
   position: sticky;
-  font-family: "Abel", sans-serif;
 }
 
 .banner p {
@@ -147,7 +153,7 @@ address {
 }
 
 /* media queries starter her-------------- */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .toggle-btn {
     background: transparent;
     color: #3086f5;
@@ -162,13 +168,27 @@ address {
 
   nav {
     display: none;
-    border: none;
+    /* border: none; */
   }
 
   nav.shown {
-    border-top: 1px solid #000;
+    border-top: none;
     display: flex;
     flex: 1 1 100%;
     flex-flow: column;
+    height: 100vh;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+  }
+
+  nav ul button p {
+    font-size: 5rem;
   }
 }

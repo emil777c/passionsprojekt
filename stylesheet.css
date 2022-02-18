@@ -47,7 +47,6 @@ nav ul button {
   justify-content: space-between;
   flex-wrap: wrap;
   position: sticky;
-  font-family: "Abel", sans-serif;
 }
 
 .banner p {
@@ -158,13 +157,27 @@ footer {
 
   nav {
     display: none;
-    border: none;
+    /* border: none; */
   }
 
   nav.shown {
-    border-top: 1px solid #000;
+    border-top: none;
     display: flex;
     flex: 1 1 100%;
     flex-flow: column;
+    height: 100vh;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+  }
+
+  nav ul button p {
+    font-size: 5rem;
   }
 }

@@ -28,8 +28,16 @@ main {
   gap: 5px;
 }
 
+main h1,
 main section {
   grid-column: 2/3;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin: 1.5rem;
 }
 header {
   display: grid;
@@ -84,7 +92,6 @@ a {
 h1 {
   font-family: "spectral", serif;
   text-align: center;
-  grid-column: 2/3;
   font-size: 2.5rem;
   color: #2564b8;
 }
@@ -105,22 +112,12 @@ p {
   color: #a8c8da;
   line-height: 1.5;
 }
-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 15px;
-  margin: 1.5rem;
-}
 
 article {
   border: 2px solid #400d01;
   background-color: #400d01;
   padding: 1.5rem;
 }
-
-/* .valgt {
-  background-color: #2a5081;
-} */
 
 #modal {
   width: 100vw;
@@ -137,7 +134,6 @@ article {
   margin: auto;
   background-color: #400d01;
   transition: 0.7s ease;
-  /* overflow: scroll; */
 }
 
 button,
@@ -152,6 +148,8 @@ button,
   font-size: 16px;
   border-radius: 10px;
 }
+
+/* footer starter her------------ */
 
 footer p {
   color: #2564b8;

@@ -4,8 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>Passionsprojekt</title>
     <style>
+      img {
+        width: 100%;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f7f5e9;
+      }
+
       main {
         display: grid;
         grid-template-columns: 1fr minmax(0, 1200px) 1fr;
@@ -30,6 +51,12 @@
         gap: 10px;
       }
 
+      /* Burgermenu knappen skjules ved større skærm---- */
+
+      .toggle-btn {
+        display: none;
+      }
+
       h1 {
         text-align: center;
         grid-column: 2/3;
@@ -51,17 +78,10 @@
         margin: 1.5rem;
       }
 
-      body {
-        background-color: #f7f5e9;
-      }
-
       article {
         border: 2px solid #400d01;
         background-color: #400d01;
         padding: 1.5rem;
-      }
-      img {
-        max-width: 100%;
       }
 
       .valgt {
@@ -72,7 +92,7 @@
         width: 100vw;
         height: 100vh;
         display: fixed;
-        background-color: #400d01c9;
+        background-color: #5d1504;
         display: none;
         position: fixed;
         top: 0;
@@ -106,11 +126,37 @@
         display: inline-block;
         font-size: 16px;
       }
+      /* media queries starter her-------------- */
+      @media (max-width: 1000px) {
+        .toggle-btn {
+          background: transparent;
+          color: #3086f5;
+          border: none;
+          display: block;
+          min-width: 50px;
+          min-height: 50px;
+          cursor: pointer;
+          font-size: 2.5rem;
+          margin: 0.5rem;
+        }
+
+        nav {
+          display: none;
+          border: none;
+        }
+
+        nav.shown {
+          border-top: 1px solid #000;
+          display: flex;
+          flex: 1 1 100%;
+          flex-flow: column;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
-      <h1>Alle</h1>
+      <button class="toggle-btn">≡</button>
     </header>
     <nav>
       <button data-kategori="Alle" class="valgt">Alle</button>
@@ -119,6 +165,7 @@
       <button data-kategori="Dessertvin">Dessertvin</button>
       <button data-kategori="Champagne">Champagne</button>
     </nav>
+    <h1>Alle</h1>
     <aside id="modal">
       <article>
         <button class="seeless">Se mindre</button>
@@ -224,5 +271,28 @@
     }
 
     tilbage.addEventListener("click", () => (modal.style.display = "none"));
+
+    // Burgermenu---------------
+
+    const btn = document.querySelector(".toggle-btn");
+    const nav = document.querySelector("nav");
+
+    btn.addEventListener("click", toggleMenu);
+
+    function toggleMenu() {
+      console.log("nav");
+      nav.classList.toggle("nav");
+      nav.classList.toggle("shown");
+
+      const menuShown = nav.classList.contains("shown");
+
+      if (menuShown) {
+        console.log("X");
+        btn.textContent = "x";
+      } else {
+        console.log("≡");
+        btn.textContent = "≡";
+      }
+    }
   </script>
 </html>

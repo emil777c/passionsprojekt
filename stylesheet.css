@@ -149,7 +149,7 @@ footer {
 }
 
 /* media queries starter her-------------- */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .toggle-btn {
     background: transparent;
     color: #3086f5;

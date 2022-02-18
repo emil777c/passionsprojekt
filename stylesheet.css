@@ -19,6 +19,9 @@ img {
 
 body {
   background-color: #edead5;
+}
+
+.overflow {
   overflow: hidden;
 }
 

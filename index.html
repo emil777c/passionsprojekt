@@ -182,7 +182,8 @@
 
     function toggleMenu() {
       nav.classList.toggle("shown");
-      nav.classList.toggle("overflow");
+      // body får overflow:hidden
+      body.classList.toggle("overflow");
 
       const menuShown = nav.classList.contains("shown");
 

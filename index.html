@@ -41,10 +41,10 @@
     </div>
     <aside id="modal">
       <article>
-        <button class="seeless">Se mindre</button>
+        <button class="seeless">Tilbage</button>
         <h2></h2>
         <img src="" alt="" />
-        <p class="land"></p>
+        <h3></h3>
         <p class="drue"></p>
         <p class="langbes"></p>
       </article>
@@ -56,7 +56,7 @@
           <article>
             <h2></h2>
             <img src="" alt="" />
-            <p class="land"></p>
+            <h3></h3>
             <p class="kortbes"></p>
           </article>
         </template>
@@ -141,7 +141,7 @@
           let klon = template.cloneNode(true).content;
           klon.querySelector("h2").textContent = vin.vinnavn;
           klon.querySelector("img").src = "billeder/" + vin.billede;
-          klon.querySelector(".land").textContent = "Land: " + vin.land;
+          klon.querySelector("h3").textContent = "Land: " + vin.land;
           klon.querySelector(".kortbes").textContent = vin.beskrivelse;
           klon
             .querySelector("article")
@@ -155,7 +155,7 @@
       console.log(vin);
       modal.querySelector("h2").textContent = vin.vinnavn;
       modal.querySelector("img").src = "billeder/" + vin.billede;
-      modal.querySelector(".land").textContent = "Land: " + vin.land;
+      modal.querySelector("h3").textContent = "Land: " + vin.land;
       modal.querySelector(".drue").textContent = "Drueblanding: " + vin.drue;
       modal.querySelector(".langbes").textContent = vin.langbeskrivelse;
       modal.style.display = "block";

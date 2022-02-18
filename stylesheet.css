@@ -4,6 +4,13 @@ img {
 .logo img {
   max-width: 90%;
 }
+
+#logo_top img {
+  margin-left: 4rem;
+  margin-top: 2rem;
+  max-width: 80%;
+}
+
 * {
   margin: 0;
   padding: 0;

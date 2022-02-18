@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="stylesheet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,150 +13,16 @@
       rel="stylesheet"
     />
     <title>Passionsprojekt</title>
-    <style>
-      img {
-        width: 100%;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: #f7f5e9;
-      }
-
-      main {
-        display: grid;
-        grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-        justify-content: space-evenly;
-        gap: 5px;
-      }
-
-      main section {
-        grid-column: 2/3;
-      }
-      header {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-
-      nav {
-        min-height: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1.5rem;
-        gap: 10px;
-      }
-
-      /* Burgermenu knappen skjules ved større skærm---- */
-
-      .toggle-btn {
-        display: none;
-      }
-
-      h1 {
-        text-align: center;
-        grid-column: 2/3;
-        font-size: 2.5rem;
-        color: #3086f5;
-      }
-      h2 {
-        font-size: 1.5rem;
-        color: white;
-      }
-      p {
-        font-size: 1.1rem;
-        color: white;
-      }
-      section {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 15px;
-        margin: 1.5rem;
-      }
-
-      article {
-        border: 2px solid #400d01;
-        background-color: #400d01;
-        padding: 1.5rem;
-      }
-
-      .valgt {
-        background-color: #2a5081;
-      }
-
-      #modal {
-        width: 100vw;
-        height: 100vh;
-        display: fixed;
-        background-color: #5d1504;
-        display: none;
-        position: fixed;
-        top: 0;
-      }
-      #modal article {
-        max-width: 250px;
-        margin: auto;
-        background-color: #f7f5e9a9;
-        transition: 0.7s ease;
-      }
-
-      button {
-        background-color: #3086f5;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        border-radius: 10px;
-      }
-
-      .seeless {
-        background-color: #3086f5;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-      }
-      /* media queries starter her-------------- */
-      @media (max-width: 1000px) {
-        .toggle-btn {
-          background: transparent;
-          color: #3086f5;
-          border: none;
-          display: block;
-          min-width: 50px;
-          min-height: 50px;
-          cursor: pointer;
-          font-size: 2.5rem;
-          margin: 0.5rem;
-        }
-
-        nav {
-          display: none;
-          border: none;
-        }
-
-        nav.shown {
-          border-top: 1px solid #000;
-          display: flex;
-          flex: 1 1 100%;
-          flex-flow: column;
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
+      <div class="logo">
+        <a href="index.html">
+          <div id="logo_top">
+            <img src="log" alt="" />
+          </div>
+        </a>
+      </div>
       <button class="toggle-btn">≡</button>
     </header>
     <nav>
@@ -165,6 +32,7 @@
       <button data-kategori="Dessertvin">Dessertvin</button>
       <button data-kategori="Champagne">Champagne</button>
     </nav>
+
     <h1>Alle</h1>
     <aside id="modal">
       <article>

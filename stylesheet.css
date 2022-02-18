@@ -19,6 +19,7 @@ img {
 
 body {
   background-color: #edead5;
+  overflow: hidden;
 }
 
 main {
@@ -190,10 +191,6 @@ address {
     flex: 1 1 100%;
     flex-flow: column;
     height: 100vh;
-  }
-
-  .overflow {
-    overflow: hidden;
   }
 
   nav ul {

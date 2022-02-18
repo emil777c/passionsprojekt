@@ -110,6 +110,9 @@
 
     function filtrerVin() {
       filter = this.dataset.kategori;
+      if (nav.classList.contains("shown")) {
+        toggleMenu();
+      }
       document.querySelector(".valgt").classList.remove("valgt");
       this.classList.add("valgt");
       vis(voresVin);
@@ -171,9 +174,8 @@
     btn.addEventListener("click", toggleMenu);
 
     function toggleMenu() {
-      console.log("nav");
-      nav.classList.toggle("nav");
       nav.classList.toggle("shown");
+      nav.classList.toggle("overflow");
 
       const menuShown = nav.classList.contains("shown");
 

@@ -156,6 +156,25 @@ article img {
   transition: 0.7s ease;
 }
 
+/* #modal {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: #2565b8c9;
+  display: none;
+  position: fixed;
+  top: 0;
+  overflow: scroll;
+}
+#modal article {
+  max-width: 80vw;
+  margin: 4rem auto;
+  background-color: #400d01;
+  transition: 0.7s ease;
+  display: grid;
+  padding: 12px;
+} */
+
 /* Grid og styling for knapperne som er placeret i article */
 .column {
   display: grid;

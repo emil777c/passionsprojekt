@@ -1,6 +1,13 @@
 img {
   width: 100%;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #logo_top {
   max-width: 90%;
 }
@@ -11,14 +18,8 @@ img {
   max-width: 80%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #edead5;
+  background-color: #eeebd9;
 }
 
 .overflow {
@@ -39,13 +40,8 @@ main section {
 
 section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 15px;
-  margin: 1.5rem;
-}
-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
 }
 
 nav ul button {
@@ -59,7 +55,12 @@ nav ul button {
   cursor: pointer;
   font-size: 1.5rem;
   color: #2564b8;
-  margin-right: 4rem;
+  margin-right: 3rem;
+  padding: 15px 32px;
+}
+
+button:hover {
+  color: #ffac1c;
 }
 
 .banner {
@@ -70,19 +71,19 @@ nav ul button {
   position: sticky;
 }
 
-.banner p {
+/* .banner p {
   margin-left: 15px;
   margin-right: 15px;
-}
+} */
 
-a {
+/* a {
   color: #2564b8;
   text-decoration: none;
-}
+} */
 
 .banner ul {
   list-style: none;
-  padding: 0;
+  padding: 15px;
   display: flex;
   gap: 20px;
 }
@@ -93,35 +94,50 @@ a {
   display: none;
 }
 
+/* styling af overskifter og brødtekst--- */
+
 h1 {
   font-family: "spectral", serif;
   text-align: center;
-  font-size: 2.5rem;
   color: #2564b8;
+  margin: 10px;
 }
 h2 {
-  font-family: "spectral", serif;
-  font-size: 1.6rem;
-  color: #a8c8da;
+  font-size: 1.4rem;
 }
 h3 {
-  font-family: "Zen Kaku Gothic Antique", serif;
-  font-size: 1.4rem;
-  color: #a8c8da;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 p {
-  font-family: "Zen Kaku Gothic Antique", serif;
   font-size: 1.125rem;
+  line-height: 1.4;
+}
+h2,
+h3,
+p {
+  font-family: "Zen Kaku Gothic Antique", serif;
   color: #a8c8da;
-  line-height: 1.5;
+  padding: 15px;
 }
 
+/* Billeder og tekst både forside og popup sat i grid-kolonner med article */
+
 article {
-  border: 2px solid #400d01;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: #400d01;
-  padding: 1.5rem;
+  gap: 10px;
 }
+
+article img {
+  order: 2;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* modal starter her----------- */
 
 #modal {
   width: 100vw;
@@ -134,52 +150,66 @@ article {
   overflow: scroll;
 }
 #modal article {
-  max-width: 600px;
+  max-width: 1000px;
   margin: auto;
   background-color: #400d01;
   transition: 0.7s ease;
 }
 
-button,
+/* Grid og styling for knapperne som er placeret i article */
+.column {
+  display: grid;
+}
+
+.seemore,
 .seeless {
   background-color: #2564b8;
   border: none;
   color: white;
+  width: fit-content;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   border-radius: 10px;
+  cursor: pointer;
+  margin: 15px;
+  align-self: end;
 }
 
 /* footer starter her------------ */
 
 footer p {
   color: #2564b8;
-  line-height: 3.5;
+  line-height: 2.5;
+  font-size: 1rem;
 }
 
 address {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #fadfab;
+  background-color: #fadea7;
   padding: 30px;
+  margin-top: 20px;
 }
 
 /* media queries starter her-------------- */
+
+/* Css for burgermenuen---- */
+
 @media (max-width: 1200px) {
   .toggle-btn {
     background: transparent;
     color: #2564b8;
     border: none;
-    display: block;
+    display: grid;
     min-width: 50px;
     min-height: 50px;
     cursor: pointer;
     font-size: 2.5rem;
-    margin: 0.5rem;
+    margin: 1.5rem;
   }
 
   nav {
@@ -202,5 +232,14 @@ address {
 
   nav ul button p {
     font-size: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 1.5rem;
   }
 }

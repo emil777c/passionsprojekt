@@ -64,7 +64,7 @@ section {
 }
 
 nav ul button {
-  font-family: "spectral", serif;
+  font-family: "Zen Kaku Gothic Antique", serif;
   background: transparent;
   font-weight: bold;
   border: none;
@@ -102,7 +102,7 @@ button:hover {
 
 .banner ul {
   list-style: none;
-  padding-top: 60px;
+  padding-top: 69px;
   display: flex;
   gap: 20px;
 }
@@ -116,7 +116,7 @@ button:hover {
 /* styling af overskifter og brødtekst--- */
 
 h1 {
-  font-family: "spectral", serif;
+  font-family: "Zen Kaku Gothic Antique", serif;
   text-align: center;
   color: #2564b8;
   margin: 10px;

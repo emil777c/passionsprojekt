@@ -26,9 +26,16 @@ header video {
 }
 
 body {
-  background-color: #eeebd9;
+  background-color: #f7f5ea;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid #2565b8c9;
+  margin-left: 30rem;
+  margin-right: 30rem;
+  margin-bottom: 2rem;
+}
 .overflow {
   overflow: hidden;
 }
@@ -66,9 +73,9 @@ nav ul button {
   padding: 15px 32px;
 }
 
-button:hover {
+/* button:hover {
   color: #ffac1c;
-}
+} */
 
 .banner {
   /* padding: 0.5rem; */
@@ -187,8 +194,7 @@ article img {
   display: grid;
 }
 
-.seemore,
-.seeless {
+.seemore {
   background-color: #2564b8;
   border: none;
   color: white;
@@ -204,6 +210,18 @@ article img {
   align-self: end;
 }
 
+.seeless {
+  background: transparent;
+  border: none;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  margin-right: 4rem;
+}
+
 /* footer starter her------------ */
 
 footer p {
@@ -216,7 +234,7 @@ address {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #fadea7;
+  background-color: #fcfbf0;
   padding: 30px;
   margin-top: 20px;
 }

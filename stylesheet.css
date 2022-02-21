@@ -167,7 +167,9 @@ article img {
   position: fixed;
   top: 0;
   overflow: scroll;
+  padding-top: 5rem;
 }
+
 #modal article {
   max-width: 1000px;
   margin: auto;

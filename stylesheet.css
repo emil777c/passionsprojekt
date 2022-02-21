@@ -202,6 +202,7 @@ article img {
 .seemore,
 .seeless {
   background-color: #f7f5ea;
+  border: none;
   /* border: 1px solid black; */
   color: #400d01;
   width: fit-content;
@@ -210,7 +211,7 @@ article img {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 40px;
   cursor: pointer;
   margin: 15px;
   align-self: end;

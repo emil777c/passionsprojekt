@@ -36,6 +36,7 @@ hr {
   margin-left: 30rem;
   margin-right: 30rem;
 }
+
 .overflow {
   overflow: hidden;
 }
@@ -61,7 +62,7 @@ section {
 nav ul button {
   font-family: "Zen Kaku Gothic Antique", serif;
   background: transparent;
-  font-weight: bold;
+  font-weight: lighter;
   border: none;
   display: block;
   min-width: 44px;

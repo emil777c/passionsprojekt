@@ -269,3 +269,30 @@ address {
     margin: 1.5rem;
   }
 }
+
+/* Forum css*/
+
+@font-face {
+  font-family: MyFont;
+  src: url(parchmentmf-vqge-webfont.woff2) format("woff");
+}
+.wrapper {
+  display: grid;
+  min-width: 100%;
+}
+
+.heading,
+img {
+  grid-area: 1/1;
+}
+
+.heading {
+  place-self: center;
+  font-family: MyFont;
+  color: white;
+  font-size: 5rem;
+}
+#email {
+  width: 40%;
+  height: 100%;
+}

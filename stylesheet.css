@@ -73,9 +73,9 @@ nav ul button {
   padding: 15px 32px;
 }
 
-/* button:hover {
-  color: #ffac1c;
-} */
+button:hover {
+  color: #400d01;
+}
 
 .banner {
   /* padding: 0.5rem; */
@@ -131,7 +131,7 @@ h2,
 h3,
 p {
   font-family: "Zen Kaku Gothic Antique", serif;
-  color: #fcfbf0;
+  color: #400d01;
   padding: 15px;
 }
 
@@ -140,7 +140,7 @@ p {
 article {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #400d01;
+  background-color: #fcfbf0;
   gap: 10px;
 }
 
@@ -157,7 +157,7 @@ article img {
   width: 100vw;
   height: 100vh;
   display: fixed;
-  background-color: #2565b8c9;
+  background-color: #f7f5eaec;
   display: none;
   position: fixed;
   top: 0;
@@ -166,7 +166,7 @@ article img {
 #modal article {
   max-width: 1000px;
   margin: auto;
-  background-color: #400d01;
+  background-color: #fcfbf0;
   transition: 0.7s ease;
 }
 
@@ -194,10 +194,11 @@ article img {
   display: grid;
 }
 
-.seemore {
-  background-color: #2564b8;
+.seemore,
+.seeless {
+  background-color: #f7f5ea;
   border: none;
-  color: white;
+  color: #400d01;
   width: fit-content;
   padding: 15px 32px;
   text-align: center;
@@ -208,18 +209,6 @@ article img {
   cursor: pointer;
   margin: 15px;
   align-self: end;
-}
-
-.seeless {
-  background: transparent;
-  border: none;
-  display: block;
-  min-width: 44px;
-  min-height: 44px;
-  cursor: pointer;
-  font-size: 1rem;
-  color: white;
-  margin-right: 4rem;
 }
 
 /* footer starter her------------ */

@@ -15,14 +15,14 @@ header video {
   padding: 1.2rem;
 }
 
-#logo_top {
+/* #logo_top {
   max-width: 90%;
-}
+} */
 
 #logo_top img {
   margin-left: 4rem;
-  margin-top: 2rem;
-  max-width: 80%;
+  /* margin-top: 2rem; */
+  max-width: 90%;
 }
 
 .intro {
@@ -102,7 +102,7 @@ button:hover {
 
 .banner ul {
   list-style: none;
-  padding: 15px;
+  padding-top: 60px;
   display: flex;
   gap: 20px;
 }

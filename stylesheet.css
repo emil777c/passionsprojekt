@@ -15,13 +15,8 @@ header video {
   padding: 1.2rem;
 }
 
-/* #logo_top {
-  max-width: 90%;
-} */
-
 #logo_top img {
-  margin-left: 4rem;
-  /* margin-top: 2rem; */
+  margin-left: 2.3rem;
   max-width: 90%;
 }
 

@@ -28,7 +28,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  grid-template-columns: 1fr minmax(0, 1300px) 1fr;
   justify-content: space-evenly;
   gap: 5px;
 }
@@ -40,7 +40,7 @@ main section {
 
 section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 20px;
 }
 

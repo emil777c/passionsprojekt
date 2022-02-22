@@ -59,7 +59,7 @@ section {
 }
 
 nav ul button {
-  font-family: "Zen Kaku Gothic Antique", serif;
+  font-family: "Playfair Display";
   background: transparent;
   font-weight: bold;
   border: none;
@@ -111,7 +111,7 @@ button:hover {
 /* styling af overskifter og brødtekst--- */
 
 h1 {
-  font-family: "Zen Kaku Gothic Antique", serif;
+  font-family: "Playfair Display";
   text-align: center;
   color: #2564b8;
   margin: 10px;
@@ -130,7 +130,7 @@ p {
 h2,
 h3,
 p {
-  font-family: "Zen Kaku Gothic Antique", serif;
+  font-family: "Source Sans Pro", serif;
   color: #400d01;
   padding: 15px;
 }

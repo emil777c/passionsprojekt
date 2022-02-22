@@ -293,7 +293,7 @@ address {
   }
 }
 
-/* Forum css*/
+/* Nyhedsbrev CSS til desktop*/
 
 .wrapper {
   display: grid;
@@ -305,14 +305,14 @@ address {
 
 .heading,
 #email,
-img {
+.paragraf img {
   grid-area: 1/1;
 }
 
 .heading {
   place-self: auto center;
   font-family: MyFont;
-  color: #400d01;
+  color: #2564b8;
   font-size: 2.5rem;
   padding-bottom: 2rem;
 }
@@ -320,4 +320,22 @@ img {
   width: 30%;
   height: 28%;
   place-self: end center;
+}
+
+.paragraf {
+  place-self: auto center;
+  color: #2564b8;
+}
+
+/*mediaQ til nyhedsbrev til mobile*/
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .paragraf {
+    font-size: 1rem;
+  }
+  #email {
+    width: 50%;
+  }
 }

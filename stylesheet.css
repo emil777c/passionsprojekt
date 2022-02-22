@@ -20,9 +20,19 @@ header video {
   max-width: 90%;
 }
 
+#intro {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1300px) 1fr;
+  justify-content: space-evenly;
+  background-color: #fcfbf0;
+}
+
 .introtext {
-  color: #2564b8;
+  grid-column: 2/3;
   text-align: center;
+  color: #2564b8;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 body {

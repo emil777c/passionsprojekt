@@ -254,6 +254,7 @@ article img {
 /* Nyhedsbrev CSS til desktop*/
 .input {
   margin: 1.5rem;
+  padding-bottom: 5rem;
 }
 
 .wrapper {

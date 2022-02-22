@@ -20,9 +20,16 @@ header video {
   max-width: 90%;
 }
 
+section {
+  background-color: #fcfbf0;
+}
+
 .introtext {
-  color: #2564b8;
+  display: flex;
   text-align: center;
+  color: #2564b8;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 body {

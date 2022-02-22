@@ -20,10 +20,9 @@ header video {
   max-width: 90%;
 }
 
-.intro {
+.introtext {
   color: #2564b8;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 body {

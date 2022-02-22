@@ -1,3 +1,4 @@
+/*Generelle regler for hjemmesiden*/
 img {
   width: 100%;
 }
@@ -7,7 +8,7 @@ img {
   padding: 0;
   box-sizing: border-box;
 }
-
+/*Video css */
 header video {
   height: 50vh;
   width: 100%;
@@ -15,11 +16,12 @@ header video {
   padding: 1.2rem;
 }
 
-#logo_top img {
-  margin-left: 2.3rem;
-  max-width: 90%;
+/*Body css*/
+body {
+  background-color: #f7f5ea;
 }
 
+/*Intro tekst css*/
 #intro {
   display: grid;
   grid-template-columns: 1fr minmax(0, 1300px) 1fr;
@@ -33,15 +35,101 @@ header video {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-
 .introtext h2 {
   color: #2564b8;
 }
 
-body {
-  background-color: #f7f5ea;
+/*Css til logoet i filtreringsmenuen*/
+#logo_top img {
+  margin-left: 2.3rem;
+  max-width: 90%;
 }
 
+/*Navigationsmenuens filtreringsknapper er stylet her*/
+nav ul button {
+  font-family: "Playfair Display";
+  background: transparent;
+  font-weight: lighter;
+  border: none;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #2564b8;
+  margin-right: 3rem;
+  padding: 15px 32px;
+}
+
+/*Hover kode til filtreringsknapper*/
+button:hover {
+  color: #400d01;
+}
+
+/*Css til filtreringsknappernes position samt logo*/
+.banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+}
+
+.banner ul {
+  list-style: none;
+  padding-top: 63px;
+  display: flex;
+  gap: 20px;
+}
+
+/* Burgermenu knappen skjules ved større skærm---- */
+
+.toggle-btn {
+  display: none;
+}
+/* media queries starter her-------------- */
+
+/* Css for burgermenuen---- */
+
+@media (max-width: 1200px) {
+  .toggle-btn {
+    background: transparent;
+    color: #2564b8;
+    border: none;
+    display: grid;
+    min-width: 50px;
+    min-height: 50px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.shown {
+    border-top: none;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+    height: 100vh;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+  }
+
+  nav ul button p {
+    font-size: 5rem;
+  }
+}
+.overflow {
+  overflow: hidden;
+}
+/*Burgermenu css slutter her*/
+
+/*Seperaringsstreg på site*/
 hr {
   border: 0;
   border-top: 1px solid #2565b8c9;
@@ -49,10 +137,7 @@ hr {
   margin-right: 30rem;
 }
 
-.overflow {
-  overflow: hidden;
-}
-
+/*Main css hvor vi har displayet grid til loop views*/
 main {
   display: grid;
   grid-template-columns: 1fr minmax(0, 1300px) 1fr;
@@ -70,56 +155,6 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-}
-
-nav ul button {
-  font-family: "Playfair Display";
-  background: transparent;
-  font-weight: lighter;
-  border: none;
-  display: block;
-  min-width: 44px;
-  min-height: 44px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #2564b8;
-  margin-right: 3rem;
-  padding: 15px 32px;
-}
-
-button:hover {
-  color: #400d01;
-}
-
-.banner {
-  /* padding: 0.5rem; */
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: sticky;
-}
-
-/* .banner p {
-  margin-left: 15px;
-  margin-right: 15px;
-} */
-
-/* a {
-  color: #2564b8;
-  text-decoration: none;
-} */
-
-.banner ul {
-  list-style: none;
-  padding-top: 63px;
-  display: flex;
-  gap: 20px;
-}
-
-/* Burgermenu knappen skjules ved større skærm---- */
-
-.toggle-btn {
-  display: none;
 }
 
 /* styling af overskifter og brødtekst--- */
@@ -187,30 +222,12 @@ article img {
   transition: 0.7s ease;
 }
 
-/* #modal {
-  width: 100vw;
-  height: 100vh;
-  display: none;
-  background-color: #2565b8c9;
-  display: none;
-  position: fixed;
-  top: 0;
-  overflow: scroll;
-}
-#modal article {
-  max-width: 80vw;
-  margin: 4rem auto;
-  background-color: #400d01;
-  transition: 0.7s ease;
-  display: grid;
-  padding: 12px;
-} */
-
 /* Grid og styling for knapperne som er placeret i article */
 .column {
   display: grid;
 }
 
+/*Knapper for at se mere og mindre er stylet her*/
 .seemore,
 .seeless {
   background-color: #eeecdf;
@@ -230,73 +247,10 @@ article img {
   font-family: "Source Sans Pro";
 }
 
-/* footer starter her------------ */
-
-footer p {
-  color: #2564b8;
-  line-height: 2.5;
-  font-size: 1rem;
-}
-
-address {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #fcfbf0;
-  padding: 30px;
-  margin-top: 20px;
-}
-
-/* media queries starter her-------------- */
-
-/* Css for burgermenuen---- */
-
-@media (max-width: 1200px) {
-  .toggle-btn {
-    background: transparent;
-    color: #2564b8;
-    border: none;
-    display: grid;
-    min-width: 50px;
-    min-height: 50px;
-    cursor: pointer;
-    font-size: 2.5rem;
-    margin: 1.5rem;
-  }
-
-  nav {
-    display: none;
-    /* border: none; */
-  }
-
-  nav.shown {
-    border-top: none;
-    display: flex;
-    flex: 1 1 100%;
-    flex-flow: column;
-    height: 100vh;
-  }
-
-  nav ul {
-    display: flex;
-    flex-flow: column;
-  }
-
-  nav ul button p {
-    font-size: 5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 20px;
-    margin: 1.5rem;
-  }
-}
-
 /* Nyhedsbrev CSS til desktop*/
+.input {
+  margin: 1.5rem;
+}
 
 .wrapper {
   display: grid;
@@ -340,5 +294,31 @@ address {
   }
   #email {
     width: 50%;
+  }
+}
+
+/* footer starter her------------ */
+
+footer p {
+  color: #2564b8;
+  line-height: 2.5;
+  font-size: 1rem;
+}
+
+address {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fcfbf0;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    margin: 1.5rem;
   }
 }

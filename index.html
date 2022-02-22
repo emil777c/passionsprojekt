@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Playfair+Display+SC:ital,wght@0,700;1,700&family=Source+Sans+Pro:wght@300&family=Ubuntu:wght@700&family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <title>Passionsprojekt</title>
@@ -29,14 +29,17 @@
     </div>
 
     <div class="banner">
-      <div id="logo_top">
-        <img src="billeder/logo1.svg" alt="logo" />
+      <div class="logo">
+        <a href="index.html">
+          <div id="logo_top">
+            <img src="billeder/logo1.svg" alt="logo" />
+          </div>
+        </a>
       </div>
-
       <button class="toggle-btn">≡</button>
       <nav>
-        <ul class="menulinks">
-          <button data-kategori="alle" class="valgt">Alle</button>
+        <ul class="menu_links">
+          <button data-kategori="Alle" class="valgt">Alle</button>
           <button data-kategori="Rødvin">Rødvin</button>
           <button data-kategori="Hvidvin">Hvidvin</button>
           <button data-kategori="Dessertvin">Dessertvin</button>
@@ -124,36 +127,39 @@
     const h1er = document.querySelector("div h1");
     const footer = document.querySelector("footer");
     const tilbage = document.querySelector(".seeless");
-    //Url til API
+    //Variabler til URL og API key
     const url = "https://tema7database-98d1.restdb.io/rest/voresvin";
     const key = "61fcf7ef3f215f310a37be70";
     let data = [];
 
+    // DOM'en loader variabel
     document.addEventListener("DOMContentLoaded", start);
     let filter = "alle";
     let voresVin;
 
-    //Funktion efter DOMload
+    //Funktion efter DOMload. Funktion når vi klikker på en filtreringsknap
     function start() {
+      // Variabel til filtreringsknapper
       const filterKnapper = document.querySelectorAll("nav button");
       filterKnapper.forEach((knap) =>
         knap.addEventListener("click", filtrerVin)
       );
       hentdata();
     }
-
+    //Funktionen til at filtrervin bliver kørt
     function filtrerVin() {
       filter = this.dataset.kategori;
       if (nav.classList.contains("shown")) {
         toggleMenu();
       }
+      //Klassen "Valgt" bliver sat på den filtreringsknap der bliver trykket på
       document.querySelector(".valgt").classList.remove("valgt");
       this.classList.add("valgt");
       vis(voresVin);
       h1er.textContent = this.textContent;
     }
 
-    //API key funktion
+    //API key funktion fra restDB
 
     const options = {
       headers: {
@@ -161,7 +167,7 @@
       },
     };
 
-    //hentData funktion
+    //hentData fra json/restDB funktion
 
     async function hentdata() {
       const respons = await fetch(url, options);
@@ -170,6 +176,7 @@
       vis(voresVin);
     }
 
+    //Funktion som viser de forskellige vine med navn,billede,land og beskrivelse fra restDB arrayet
     function vis(voresVin) {
       container.textContent = "";
       voresVin.forEach((vin) => {
@@ -188,6 +195,7 @@
       });
     }
 
+    //Funktion som viser mere af vinen når man trykker på den i singleview
     function visDetaljer(vin) {
       console.log(vin);
       modal.querySelector("h2").textContent = vin.vinnavn;
@@ -198,7 +206,7 @@
       // body.style.overflow = "hidden";
       modal.style.display = "block";
     }
-
+    //Knap til at komme ud fra singleview
     tilbage.addEventListener("click", () => {
       modal.style.display = "none";
       // body.style.overflow = "auto";

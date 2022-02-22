@@ -30,9 +30,12 @@ header video {
 .introtext {
   grid-column: 2/3;
   text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.introtext h2 {
   color: #2564b8;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 body {
@@ -292,27 +295,29 @@ address {
 
 /* Forum css*/
 
-@font-face {
-  font-family: MyFont;
-  src: url(parchmentmf-vqge-webfont.woff2) format("woff");
-}
 .wrapper {
   display: grid;
   min-width: 100%;
+  background-color: #fcfbf0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .heading,
+#email,
 img {
   grid-area: 1/1;
 }
 
 .heading {
-  place-self: center;
+  place-self: auto center;
   font-family: MyFont;
-  color: white;
-  font-size: 5rem;
+  color: #400d01;
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
 }
 #email {
-  width: 40%;
-  height: 100%;
+  width: 30%;
+  height: 28%;
+  place-self: end center;
 }

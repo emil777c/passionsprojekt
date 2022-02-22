@@ -71,7 +71,14 @@ button:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: sticky;
+  background-color: aqua;
+}
+
+.vist {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
 .banner ul {
@@ -112,7 +119,6 @@ button:hover {
     display: flex;
     flex: 1 1 100%;
     flex-flow: column;
-    height: 100vh;
   }
 
   nav ul {

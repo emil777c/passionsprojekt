@@ -219,13 +219,15 @@
 
     const btn = document.querySelector(".toggle-btn");
     const nav = document.querySelector("nav");
+    const banner = document.querySelector(".banner");
 
     btn.addEventListener("click", toggleMenu);
 
     function toggleMenu() {
       nav.classList.toggle("shown");
+      banner.classList.toggle("vist");
       // body får overflow:hidden
-      body.classList.toggle("overflow");
+      //body.classList.toggle("overflow");
 
       const menuShown = nav.classList.contains("shown");
 

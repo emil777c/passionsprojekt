@@ -30,8 +30,8 @@ header video {
 .introtext {
   grid-column: 2/3;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .introtext h2 {

@@ -319,7 +319,7 @@ address {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #fcfbf0;
+  background-color: #eeecdf;
   padding: 30px;
   margin-top: 20px;
 }

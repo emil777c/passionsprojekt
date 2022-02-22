@@ -30,9 +30,12 @@ header video {
 .introtext {
   grid-column: 2/3;
   text-align: center;
-  color: #2564b8;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.introtext h2 {
+  color: #2564b8;
 }
 
 body {

@@ -284,8 +284,50 @@ input p {
   color: #eeecdf;
 }
 
-/*mediaQ til nyhedsbrev til mobile*/
+/* footer starter her------------ */
+
+footer p {
+  color: #2564b8;
+  line-height: 2;
+  font-size: 0.8rem;
+}
+
+address {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #eeecdf;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+/* her starter media queries------- */
+
+@media (min-width: 1200px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 20px;
+    margin: 1.5rem;
+  }
+
+  article {
+    padding: 3rem;
+  }
+
+  main {
+    padding: 5rem;
+  }
+  footer p {
+    color: #2564b8;
+    line-height: 2.5;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 1200px) {
+  /*mediaQ til nyhedsbrev til mobile*/
+
   .heading {
     font-size: 1.5rem;
     font-family: "Source Sans Pro";
@@ -299,45 +341,9 @@ input p {
   #send {
     width: 15%;
   }
-}
 
-/* footer starter her------------ */
+  /* Css for burgermenuen---- */
 
-footer p {
-  color: #2564b8;
-  line-height: 2.5;
-  font-size: 1rem;
-}
-
-address {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #eeecdf;
-  padding: 30px;
-  margin-top: 20px;
-}
-
-@media (min-width: 1200px) {
-  section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 20px;
-    margin: 1.5rem;
-  }
-
-  article {
-    padding: 3rem;
-  }
-
-  main {
-    padding: 5rem;
-  }
-}
-
-/* Css for burgermenuen---- */
-
-@media (max-width: 1200px) {
   .toggle-btn {
     background: transparent;
     color: #2564b8;

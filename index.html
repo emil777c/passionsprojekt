@@ -15,11 +15,15 @@
     <title>Passionsprojekt</title>
   </head>
   <body>
+    <!--Header der indeholder videoen til vores forside-->
     <header>
       <video autoplay muted loop id="voresvideo" poster="placehold.png">
         <source src="nyvideo1.mp4" type="video/mp4" />
       </video>
     </header>
+
+    <!--Intro tekst der ligger på sitet mellem videoen og menuen-->
+
     <section id="intro">
       <div class="introtext">
         <h2>
@@ -30,6 +34,8 @@
       </div>
     </section>
 
+    <!--Her er vores menu med knapper og logo som ligger i en samlet div med klassen .banner-->
+
     <div class="banner">
       <div class="logo">
         <a href="index.html">
@@ -38,6 +44,8 @@
           </div>
         </a>
       </div>
+      <!--knap til burgermenu-->
+
       <button class="toggle-btn">≡</button>
 
       <!--Filtreringknapper med datasæt-->
@@ -51,7 +59,7 @@
         </ul>
       </nav>
     </div>
-
+    <!--H1er der skifter kategori, når der trykkes på filterknapperne-->
     <div>
       <h1>Alle</h1>
       <hr />
@@ -86,6 +94,8 @@
         </template>
       </section>
     </main>
+
+    <!--email som tilmelding wrappet i div med klassen .input-->
     <div class="input">
       <div class="wrapper">
         <h2 class="heading">Tilmeld dig nyhedsbrevet</h2>
@@ -101,7 +111,7 @@
         />
       </div>
     </div>
-
+    <!--Footeren som indeholder kontankt info og logo-->
     <footer>
       <address>
         <div>
@@ -113,7 +123,7 @@
             >.<br />
           </p>
         </div>
-        <div id="logo_bottom">
+        <div>
           <img src="billeder/logo1.svg" alt="logo" />
         </div>
       </address>

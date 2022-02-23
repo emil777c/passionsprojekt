@@ -97,39 +97,6 @@ button:hover {
 
 /* Css for burgermenuen---- */
 
-@media (max-width: 1200px) {
-  .toggle-btn {
-    background: transparent;
-    color: #2564b8;
-    border: none;
-    display: grid;
-    min-width: 50px;
-    min-height: 50px;
-    cursor: pointer;
-    font-size: 2.5rem;
-    margin: 1.5rem;
-  }
-
-  nav {
-    display: none;
-  }
-
-  nav.shown {
-    border-top: none;
-    display: flex;
-    flex: 1 1 100%;
-    flex-flow: column;
-  }
-
-  nav ul {
-    display: flex;
-    flex-flow: column;
-  }
-
-  nav ul button p {
-    font-size: 5rem;
-  }
-}
 .overflow {
   overflow: hidden;
 }
@@ -138,7 +105,7 @@ button:hover {
 /*Seperaringsstreg på site*/
 hr {
   border: 0;
-  border-top: 1px solid #2565b8c9;
+  border-top: 1px solid #2565b8;
   margin-left: 30rem;
   margin-right: 30rem;
 }
@@ -185,7 +152,7 @@ h2,
 h3,
 p {
   font-family: "Source Sans Pro";
-  color: #400d01;
+  color: rgb(64, 13, 1);
   padding: 15px;
 }
 
@@ -211,7 +178,7 @@ article img {
   width: 100vw;
   height: 100vh;
   display: fixed;
-  background-color: #eeecdfcc;
+  background-color: #eeecdf;
   display: none;
   position: fixed;
   top: 0;
@@ -338,5 +305,41 @@ address {
 
   main {
     padding: 5rem;
+  }
+}
+
+/* Css for burgermenuen---- */
+
+@media (max-width: 1200px) {
+  .toggle-btn {
+    background: transparent;
+    color: #2564b8;
+    border: none;
+    display: grid;
+    min-width: 50px;
+    min-height: 50px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.shown {
+    border-top: none;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+  }
+
+  nav ul button p {
+    font-size: 5rem;
   }
 }

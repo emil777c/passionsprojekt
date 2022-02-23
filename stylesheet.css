@@ -262,6 +262,10 @@ input {
   background-color: #eeecdf;
 }
 
+input p {
+  color: #400d01;
+}
+
 #send {
   width: 5%;
   height: 100%;
@@ -269,9 +273,15 @@ input {
   place-self: center;
   margin-top: 2rem;
 }
-
+#send p {
+  color: #400d01;
+}
 #send:hover {
   background-color: #2564b8;
+}
+
+#send:hover p {
+  color: #eeecdf;
 }
 
 /*mediaQ til nyhedsbrev til mobile*/

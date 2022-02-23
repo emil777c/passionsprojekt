@@ -267,7 +267,8 @@ article img {
 
 .heading,
 #email,
-.paragraf img {
+.paragraf,
+#send img {
   grid-area: 1/1;
 }
 
@@ -282,10 +283,11 @@ article img {
   width: 30%;
   height: 28%;
   place-self: end center;
+  margin-top: 8rem;
 }
 
 .paragraf {
-  place-self: auto center;
+  place-self: center;
   color: #2564b8;
 }
 
@@ -294,16 +296,31 @@ input {
   background-color: #eeecdf;
 }
 
+#send {
+  width: 5%;
+  height: 100%;
+  border-radius: 50px;
+  place-self: center;
+  margin-top: 2rem;
+}
+
+#send:hover {
+  background-color: #2564b8;
+}
+
 /*mediaQ til nyhedsbrev til mobile*/
 @media (max-width: 1200px) {
   .heading {
     font-size: 1.5rem;
   }
   .paragraf {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   #email {
     width: 50%;
+  }
+  #send {
+    width: 15%;
   }
 }
 

@@ -210,7 +210,6 @@ article img {
 #modal {
   width: 100vw;
   height: 100vh;
-  display: fixed;
   background-color: #eeecdfcc;
   display: none;
   position: fixed;

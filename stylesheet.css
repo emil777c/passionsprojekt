@@ -46,7 +46,7 @@ body {
 }
 
 /*Navigationsmenuens filtreringsknapper er stylet her*/
-nav ul button {
+nav button {
   font-family: "Playfair Display";
   background: transparent;
   font-weight: lighter;
@@ -81,11 +81,16 @@ button:hover {
   height: 100vh;
 }
 
-.banner ul {
+.banner {
   list-style: none;
   padding-top: 63px;
   display: flex;
   gap: 20px;
+}
+
+.menu_links {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Burgermenu knappen skjules ved større skærm---- */
@@ -282,7 +287,8 @@ input {
 footer p {
   color: #2564b8;
   line-height: 2;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 address {
@@ -311,11 +317,11 @@ address {
   main {
     padding: 5rem;
   }
-  footer p {
+  /* footer p {
     color: #2564b8;
     line-height: 2.5;
     font-size: 1rem;
-  }
+  } */
 }
 
 @media (max-width: 1200px) {
@@ -360,12 +366,16 @@ address {
     flex-flow: column;
   }
 
-  nav ul {
+  nav button {
     display: flex;
     flex-flow: column;
   }
 
-  nav ul button p {
+  nav button p {
     font-size: 5rem;
+  }
+
+  .menu_links {
+    display: none;
   }
 }

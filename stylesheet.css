@@ -46,7 +46,7 @@ body {
 }
 
 /*Navigationsmenuens filtreringsknapper er stylet her*/
-nav ul button {
+nav button {
   font-family: "Playfair Display";
   background: transparent;
   font-weight: lighter;
@@ -81,11 +81,16 @@ button:hover {
   height: 100vh;
 }
 
-.banner ul {
+.banner {
   list-style: none;
   padding-top: 63px;
   display: flex;
   gap: 20px;
+}
+
+.menu_links {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Burgermenu knappen skjules ved større skærm---- */
@@ -362,12 +367,16 @@ address {
     flex-flow: column;
   }
 
-  nav ul {
+  nav button {
     display: flex;
     flex-flow: column;
   }
 
-  nav ul button p {
+  nav button p {
     font-size: 5rem;
+  }
+
+  .menu_links {
+    display: none;
   }
 }

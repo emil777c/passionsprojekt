@@ -303,13 +303,6 @@ address {
 /* her starter media queries------- */
 
 @media (min-width: 1200px) {
-  /* section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-    gap: 20px;
-    margin: 1.5rem;
-  } */
-
   article {
     padding: 3rem;
   }
@@ -317,11 +310,6 @@ address {
   main {
     padding: 5rem;
   }
-  /* footer p {
-    color: #2564b8;
-    line-height: 2.5;
-    font-size: 1rem;
-  } */
 }
 
 @media (max-width: 1200px) {
